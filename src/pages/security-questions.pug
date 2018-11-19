@@ -1,0 +1,73 @@
+extends ../layouts/default.pug
+//- extends layouts/element-mixin.pug
+
+block headline
+	- var headline = "Security Questions";
+	- var subheadline = "Select and answer three (3) security questions:";
+	
+block progress
+
+block content
+	block form
+		validating-form(inline-template)
+			form.form--simple(@submit='onSubmit')
+				.form-wrapper
+					
+					//- Question 1
+					.form-field
+						label(for="security-question") Security Question #1
+						//- Disable popup and verified icon
+						validating-input(:disable-popup='true' :disable-verified='true')
+							select-dropdown(:options='{ "q1": "Question 1", "q2": "Question 2" }')
+								input(
+									type='hidden' 
+									name='question1' 
+									v-validate='"required"'
+									data-vv-as='security question 1')
+						.input-row: validating-input: input(
+							type="text"
+							name='answer1'
+							placeholder="Your answer"
+							v-validate='"required"'
+							data-vv-as='security answer 1')
+
+					//- Question 2
+					.form-field
+						label(for="security-question") Security Question #2
+						validating-input(:disable-popup='true' :disable-verified='true')
+							select-dropdown(:options='{ "q1": "Question 1", "q2": "Question 2" }')
+								input(
+									type='hidden' 
+									name='question2'
+									v-validate='"required"'
+									data-vv-as='security question 2')
+						.input-row: validating-input: input(
+							type="text"
+							name='answer2'
+							placeholder="Your answer"
+							v-validate='"required"'
+							data-vv-as='security answer 2')
+					
+					//- Question 3
+					.form-field
+						label(for="security-question") Security Question #3
+						validating-input(:disable-popup='true' :disable-verified='true')
+							select-dropdown(:options='{ "q1": "Question 1", "q2": "Question 2" }')
+								input(
+									type='hidden'
+									v-validate='"required"'
+									name='question3' 
+									data-vv-as='security question 3')
+						.input-row: validating-input: input(
+							type="text"
+							name='answer3'
+							placeholder="Your answer"
+							v-validate='"required"'
+							data-vv-as='security answer 3')
+				
+				//- Terms and services
+
+				+loadButton("Submit")
+				
+				.cta
+					a.underline Remind me later

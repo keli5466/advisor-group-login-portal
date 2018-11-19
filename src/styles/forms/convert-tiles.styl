@@ -1,0 +1,26 @@
+//Convert Page
+
+.center-content
+	.tiles--convert
+		padding rem(45px) 0
+		.tile
+			position: relative
+			height: rem(tile-height)
+			width:  rem(tile-width)
+			margin 1%
+			&__img
+				margin 0 auto
+				width 100%
+				height 100%
+				max-width 400px
+			img
+				@media (max-width mobile)
+					width 80%
+
+		//Middle Icon
+		.icon-right-arrow
+			margin 0 30px
+			font icon, 30px, primary-blue
+			@media (max-width mobile)
+				margin 0
+				font-size 20px

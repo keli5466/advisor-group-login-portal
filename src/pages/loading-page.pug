@@ -1,0 +1,13 @@
+extends ../layouts/default.pug
+//- extends layouts/element-mixin.pug
+
+
+block headline
+	- var hidden = true //When header needs to be hidden
+	- var span = "span" //this span class will bind to .subheadline -- Use if you need to change the style for a specfic page
+	
+block content
+	block loader
+		.loader-block.loader-block--larger 
+			.loader
+			p.loader-copy We are now taking you to eQuipt Client Portal...

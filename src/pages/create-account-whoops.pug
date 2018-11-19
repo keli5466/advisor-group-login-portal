@@ -1,0 +1,12 @@
+extends ../layouts/default.pug
+
+
+//-This is a page is empty only to show the popup modal
+block headline
+	- var headline = "Hi There !";
+	- var subheadline = "Please tell us a little about yourself";
+block progress
+	include ../partials/progress.pug
+	
+	//-Popup Modal
+	whoops-modal

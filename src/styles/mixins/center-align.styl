@@ -1,0 +1,45 @@
+
+
+//Center Align Mixing, Choose horizontal, Vertical, or Both
+center-align(type){
+	position absolute
+	if type == horizontal {
+		left 50%
+		transform translateX(-50%)
+	}
+	if type == vertical {
+		top 50%
+		transform translateY(-50%)
+	}
+	if type == both {
+		top 50%
+		left 50%
+		transform translate(-50%,-50%)
+	}
+}
+
+//Line Mixin, for bottom size and height switch
+line(size, color, side, height) {
+	position relative
+	&:after {
+		content: ""
+		background: color
+		height: height
+		z-index 6
+		position: absolute
+		if side == line {
+			border-top: 1
+			border-left: size solid color
+			right: 0
+			top: 50%
+			transform: translate( 0%, -50%)
+			height: height
+		}
+		if side == bottom {
+			top: 100%
+			left: 50%
+			transform translateX(-50%)
+			width: size
+		}
+	}
+}

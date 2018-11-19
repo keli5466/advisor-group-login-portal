@@ -1,0 +1,71 @@
+/**
+ * Mixins and fucntions related to typography
+ */
+
+regular = 'regular'
+bold = 'bold'
+extra-bold = 'extra-bold'
+
+
+// The main font family
+// body-family = 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
+
+/**
+ * Use rems for font-size unless the font is less than 14px
+ *
+ * @param {px}      size
+ * @param {boolean} lieral If true, don't do the rem conversion
+ */
+font-size(size, literal = false)
+	if literal or size <= 14px
+		font-size size
+	else
+		font-size rem(size)
+
+/**
+ * Simple font declaraations
+ *
+ * @param  {string} style
+ * @param  {unit}   size   Font size, will be rem-ed automatically
+ * @param  {color}  color
+ */
+font(style, size = null, color = null)
+
+	// Open sans
+	if style == 'regular'
+		font-weight 400
+	else if style == 'bold'
+		font-weight 700
+	else if style == 'extra-bold'
+		font-weight 800
+	else if style == 'headline'
+		font-weight 800
+		font-size 40px
+		color light-grey
+		line bottom, blue, 50%
+	else if style == 'icon'
+		font-family 'icomoon' !important
+		speak none
+		font-style normal
+		font-weight normal
+		font-variant normal
+		text-transform none
+		line-height 1
+
+	// Add font size using the rem value of what was passed in
+	font-size size if size
+
+	// Add font color
+	color color if color
+
+/**
+ * Helper for implementing icons
+ *
+ * @param  {string} name   The name of the icon
+ * @param  {unit}   size   Font size, will be rem-ed automatically
+ * @param  {color}  color
+ */
+// @import '~global/fonts/icomoon/variables'
+// icon(name, size = null, color = null)
+// 	font 'icon', size, color
+// 	content lookup('icon-' + name)

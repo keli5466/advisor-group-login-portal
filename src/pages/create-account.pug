@@ -1,0 +1,57 @@
+extends ../layouts/default.pug
+
+block headline
+	- var headline = "Hi There !";
+	- var subheadline = "Please tell us a little about yourself";
+block progress
+	include ../partials/progress.pug
+
+block content
+	block form
+		//- .form--simple -> inputs in one column
+	validating-form(inline-template)
+		form.form--simple(@submit='onSubmit')
+			.form-wrapper.clearfix
+				//-Wrap in form wrapp
+				+general-form-error("You've already created an Account")
+				.form-field.split.clearfix
+					label Your Name 
+					.input-row: validating-input
+						+inputText('firstname', 'First Name', 'required' )
+				.form-field.split.clearfix.left-space
+					label.hidden Last Name
+					.input-row: validating-input
+						+inputText('lastname', 'Last Name', 'required' )
+
+				.form-field.userEmail(style="clear:both")
+					label Email
+					.input-row: validating-input
+						+inputText('email', 'example@gmail.com', 'required|email' , 'email')
+
+				.form-field.split.clearfix
+					.label
+						label Phone Number
+						//- more-info -> popup with the question mark icon
+						more-info You should do something 
+					.input-row: validating-input
+						+inputText('phone', 
+							'( _ _ _ )  _ _ _  - _ _ _ _', 
+							'required|mask:(###) ###-####' , 
+							'tel')
+				
+				.form-field.split.clearfix.left-space
+					.label
+						label(for="userAccount") SagePoint Account Number
+						//- more-info -> popup with the question mark icon
+						more-info Your SagePoint Account Number can be found on your latest invoice. 
+					.input-row: validating-input
+						+inputText('account_number', 
+							'_ _ _ - _ _ _ _ - _ _ _ _', 
+							'required|mask:### - #### - ####')
+						
+			//-terms of use
+			.form-bottom-bopy.terms-services
+				+checkBox('terms','required')
+				
+			//-Call top if you need want the button to have its natural spacing
+			+loadButton("Next",'top')

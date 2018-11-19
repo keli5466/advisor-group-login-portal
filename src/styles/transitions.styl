@@ -1,0 +1,48 @@
+
+.fade-enter-active
+.fade-leave-active
+	transition: opacity .3s ease-in-out
+
+.fade-enter
+.fade-leave-to
+	opacity: 0
+
+
+.slide-in-right-enter-active, .slide-in-right-leave-active
+	transition transform default-timing ease-out-quart,
+						opacity default-timing ease-out-quart
+
+.slide-in-right-enter, .slide-in-right-leave-to, .slide-in-right-leave-active
+	transform translateX(100%)
+	opacity 0
+
+.slide-in-down-enter-active, .slide-in-down-leave-active
+	transition transform default-timing ease-out-quart,
+						 opacity default-timing ease-out-quart
+
+.slide-in-down-enter, .slide-in-down-leave-to, .slide-in-down-leave-active
+	transform translateY(-100%)
+	opacity 0
+
+.fade-in-up-enter-active, .fade-in-up-leave-active
+	transition opacity default-timing ease-out-quart,
+						transform default-timing ease-out-quart
+
+.fade-in-up-enter, .fade-in-up-leave-to, .fade-in-up-leave-active
+	transform translateY(150px)
+	opacity 0
+
+.fade-in-down-enter-active, .fade-in-down-leave-active
+	transition opacity default-timing ease-out-quart,
+						transform default-timing ease-out-quart
+
+.fade-in-down-enter, .fade-in-down-leave-to, .fade-in-down-leave-active
+	transform translateY(150px)
+	opacity 0
+
+.fade-out-enter-active, .fade-out-leave-active
+	transition opacity slower-timing ease-out-quart,
+						transform slower-timing ease-out-quart
+
+.fade-out-enter, .fade-out-leave-to , .-leave-active
+	opacity 0

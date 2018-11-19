@@ -1,0 +1,63 @@
+
+//-LAYOUT STYLES
+
+.login-page
+	background-color background-grey
+	width 100%
+	// Make columns using flex so that the shorter side will expand to fill the
+	// height using stretch
+	display flex
+	.container
+		width 40%
+	.side-marquee
+		width 60%
+		position relative
+	@media(max-width tablet)
+		.container, .side-marquee
+			width 50%
+	@media (max-width mobile)
+		.container
+			width 100%
+		.side-marquee
+			display none
+
+	// Reduce minimum spacing on login page
+	.middle .cell
+		padding 0 5%
+		//IE bug
+		@media (max-width mobile)
+			padding 0
+
+
+	header
+		background-color transparent
+		box-shadow none
+		max-width 65%
+		margin 0 auto
+		.spf-logo
+		.equipt-logo
+			left auto
+		.equipt-logo
+			right 0
+			transform translate(0%,-50%)
+
+	.header-content
+		//-Page Specfic Style
+		.headline
+			font-size 32px
+			padding-bottom 15px
+
+	footer
+		//-Needed to keep login page without scroll
+		margin-bottom rem(20px)
+		margin-top 0
+
+	.bottom-copy
+		p
+			font size 15px
+			a
+				font-weight 600
+		.more-info-tool-tip
+			margin 23px 0
+			a
+				font-size 14px

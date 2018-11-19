@@ -1,0 +1,19 @@
+extends ../layouts/default.pug
+
+block headline
+	- var headline = "spfview.com Login";
+	- var subheadline = "Get started by entering your spfview.com login credentials.";
+block progress
+
+
+block content
+	block form
+		.embed-wrapper(style="margin:2.875rem auto;width: 80vw;")
+			.placeholder(style='margin: 0 auto; max-width: 400px;')
+				img(src="../styles/img/SPF_API.png")
+						
+				//-Embed iframe here
+					
+			.bottom-copy.center
+				p(style="margin-top: 50px") Don't have spfview.com account? 
+					a.right-arrow(href='') Sign Up for eQuipt

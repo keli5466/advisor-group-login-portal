@@ -1,0 +1,60 @@
+extends ../layouts/default.pug
+//- 
+block headline
+	- var headline = "Set Up Security Questions";
+	- var subheadline = "If you forget your username or password, you can reset your credentials by using the following:";
+block progress
+
+block content
+	block form
+		form.form--tiles
+			.form-wrapper
+				.form-field-radio
+					
+					//-option for security question
+					input.radio-button#security-question(
+						type="radio"
+						name="choice"
+						value="question")
+					.radio-tile
+						.center-wrapper
+							.tile-icon
+								img(src="../styles/img/security-question.svg")
+							label.radio-tile-label(for='security-question') 
+								| Answer a Security <br>Question
+							
+					//-option for email
+				.form-field-radio
+					input.radio-button#passcode-via-email(
+						type="radio"
+						name="choice"
+						value="email")
+					.radio-tile
+						.center-wrapper
+							.tile-icon
+								img(src="../styles/img/email-get.svg")
+							label.radio-tile-label(for='passcode-via-email') 
+								| Get a Passcode <br>via Email
+				
+				//-option for paddcode
+				.form-field-radio
+					input.radio-button#password-via-text(
+						type="radio"
+						name="choice"
+						value="text")
+					.radio-tile
+						.center-wrapper
+							.tile-icon
+								img(src="../styles/img/password-text.svg" style="margin-right:15px")
+							label.radio-tile-label(for='password-via-text') 
+								| Get a Passcode<br> via Text
+								
+			//-terms and services
+			.additional-info
+				p(style='line-height: 2') It looks like you haven't set up security questions for your account.<br> Take a minute to set up three (3) security questions.
+			
+			button.btn.btn--primary(type='submit') Create Questions
+			
+			.cta
+				a Remind me later
+			

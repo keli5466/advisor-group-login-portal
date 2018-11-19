@@ -1,0 +1,46 @@
+extends ../layouts/default.pug
+
+
+block headline
+	- var headline = "Register";
+	- var subheadline = "Lastly, please create your login credentials";
+block progress
+	.progress-bar
+		.progress-step
+			.progress-title
+				span About You
+		.progress-step
+			.progress-title
+				span Authentication
+		.progress-step.active
+			.progress-title
+				span Register
+
+
+block content
+	block form
+	validating-form(inline-template)
+		form.form--simple(@submit='onSubmit')
+			.form-wrapper
+				+general-form-error('You have already registered')
+				.form-field
+					.label
+						label Create Username 
+						more-info You should do something 
+					.input-row: validating-input
+						+inputText('username', 'Username or Email', 'required|unique:https://httpstat.us/400?value=%s' )
+				.form-field
+					.label
+						label Create Password
+						password-meter
+						more-info You should do something
+					.input-row: validating-input: toggleable-password
+						+inputText('password', 'Enter Your Password', 'required|password', 'password')
+						//-Icon to show password
+						//- span.show-password(@click='toggleShowingPassword')
+				.form-field
+					label(for="lastname") Confirm Password 
+					.input-row: validating-input
+						+inputText('password_confirmation', 'Enter Your Password', 'required|confirmed:password', 'password' )
+						
+			+loadButton("Next")

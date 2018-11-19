@@ -1,0 +1,50 @@
+extends ../layouts/login.pug
+
+
+//-Define Headline and Subheadline
+block headline
+	- var headline = "Login";
+	- var subheadline = "Enter your eQuipt credentials";
+
+
+//-Right Side of Page
+//-Form
+block form
+	validating-form(inline-template)
+		form.form--simple(@submit='onSubmit')
+			.form-wrapper
+				+general-form-error('Invalid Credentials')
+				.form-field
+					label Username 
+						a Forgot Username ?
+					.input-row: validating-input
+						//-(name of input, placeholder text, validation options)
+						+inputText('username', 'Enter Username or Email', 'required' )
+				.form-field
+					label Password 
+						a Forgot Password?
+					.input-row: validating-input
+						//-(name of input, placeholder text, validation options)
+						+inputText('password', 'Enter Your Password', 'required', 'password')
+						
+			+loadButton("Next")
+
+	.bottom-copy.center
+		p Don't have an account? 
+			a.right-arrow(href='') Sign Up 
+
+		.more-info-tool-tip
+			//-Default is more info icon, if you want clickable content pass the string in content = ''
+			more-info(label= 'What You Will Need' placement='right-bottom') To create a new account, you will need to provide your SagePoint Account Number and your Social Security Number (SSN).
+
+//-Right Side
+block sidemarque
+	.side-marquee: login-slider
+		.slide(style='background-image: url("http://yo.bkwld.com/1S2j1O0n3i42/eQuipe_Login_Image.jpg")')
+			.content
+				h2 We are here for you
+				p Page 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		.slide(style='background-image: url("http://yo.bkwld.com/422T40170F0O/download/eQuipe_Login_Image_2.jpg")')
+			.content
+				h2 We are here for you
+				p Page 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

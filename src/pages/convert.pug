@@ -1,0 +1,21 @@
+extends ../layouts/default.pug
+//- 
+block headline
+	- var headline = "Let's Convert";
+	- var subheadline =  "We can save you time by transferring all your information from spfview.com to eQuipt ";
+
+block progress
+	
+block content
+
+	//-center-content- the wrapper used when no form is 
+	.center-content 
+		.tiles--convert
+			.tile.tile__img
+				img(src='../styles/img/Lets_Convert.png')
+					
+		.bottom-copy
+				p Get started by entering your spfview.com login credentials.
+		
+		button.btn.btn--primary(type='') Next
+		

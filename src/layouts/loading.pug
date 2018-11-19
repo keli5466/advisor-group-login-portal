@@ -1,0 +1,31 @@
+doctype html
+html
+	head
+		
+		//- Boilerplate meta
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
+		meta(name='viewport' content='width=device-width, initial-scale=1.0')
+		meta(name='msapplication-tap-highlight' content='no')
+			
+		//- Load CSS
+		if minify
+			link(rel='stylesheet' type='text/css' href='/assets/index.css')
+		
+	body
+		#app.container(v-cloak)
+			.top
+				include ../partials/header.pug
+				block progress
+			.middle: .cell
+				include ../partials/headline.pug
+				include ../partials/element-mixin.pug
+				block content
+			.bottom
+				include ../partials/footer.pug
+		
+		//- Load JS
+		if minify
+			script(src='/assets/index.js')
+		else
+			script(src='http://localhost:8080/assets/index.js')

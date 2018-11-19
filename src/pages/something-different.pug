@@ -1,0 +1,21 @@
+extends ../layouts/default.pug
+//- 
+block headline
+	- var headline = "Something's Different...";
+	- var subheadline = "spfview.com is now spfequipt.com <a><u>Learn More</u></a>";
+block progress
+	
+block content
+	.center-content
+		.tiles--convert
+			.tile.tile__img
+				img(src='../styles/img/Something_Different.png')
+
+		.bottom-copy
+				p We'll save you time by securely transferring all of your information from spfview.com to eQuipt.
+		
+		button.btn.btn--primary Convert to eQuipt
+		
+		.bottom-cta.center
+			p(style='font-size: rem(15px)') Don't have a spfview.com account? 
+				a.right-arrow(style='font-weight:600') Create a new eQuipt profile

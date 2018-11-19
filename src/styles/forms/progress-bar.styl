@@ -1,0 +1,35 @@
+
+//-Progress Bar -sign up
+.progress-bar
+	display flex
+	flex-direction row
+	max-width 1000px
+	padding 0 35px 35px
+	margin 0 auto
+	counter-reset progresscounter
+
+	.progress-step
+		flex 1
+		opacity 0.5
+		line(100%, dark-grey, bottom, 2px)
+		text-align center
+
+		&.active
+			opacity 1
+			transition opacity .2s ease-in-out
+		.progress-title
+			margin 11% auto
+			font bold, 16px, ""
+			text-transform uppercase
+			@media (max-width mobile)
+				font-size 10px
+
+			//Needed to number the progress-steps
+			&:before
+				counter-increment progresscounter
+				content counter(progresscounter, decimal-leading-zero)
+				margin-right 10px
+				@media (max-width mobile)
+					display block
+					margin-bottom 5px
+					margin-right: 0

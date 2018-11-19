@@ -1,0 +1,16 @@
+extends ../layouts/default.pug
+
+
+block headline
+	.headline-img.circle-background
+		img(src="../styles/img/trophy.svg")
+	- var headline = "Congratulations!";
+	- var subheadline = "Your account has been created successfully.";
+	- var span = "span"//this span class will bind to .subheadline -- Use if you need to change the style for a specfic page
+	
+
+block content
+	block loader
+		.loader-block
+			.loader
+			p.loader-copy We are now taking you to eQuipt Client Portal...

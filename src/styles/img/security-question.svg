@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="70px" viewBox="0 0 70 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>task question</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="eQuipt-Templates" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="eQuipt---Forgot-Password" transform="translate(-404.000000, -511.000000)">
+            <g id="task-question" transform="translate(406.000000, 513.000000)">
+                <circle id="Oval" stroke="#3F7EA3" stroke-width="3" stroke-linejoin="round" cx="48.5833333" cy="48.5833333" r="17"></circle>
+                <path d="M48.5833333,58.5 C47.7985,58.5 47.1666667,59.1375 47.1666667,59.9195 C47.1666667,60.6958333 47.7985,61.3333333 48.5833333,61.3333333 C49.3625,61.3333333 50,60.6958333 50,59.9195 C50,59.1375 49.3625,58.5 48.5833333,58.5 Z" id="Shape" fill="#3F7EA3" fill-rule="nonzero"></path>
+                <path d="M43.625,43.625 C43.625,40.8851667 45.8435,38.6666667 48.5833333,38.6666667 C51.3231667,38.6666667 53.5416667,40.8851667 53.5416667,43.625 C53.5416667,46.3648333 51.3231667,48.5833333 48.5833333,48.5833333 L48.5833333,54.25" id="Shape" stroke="#3F7EA3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M28.75,59.9166667 L6.08333333,59.9166667 C2.96666667,59.9166667 0.416666667,57.3723333 0.416666667,54.25 L0.416666667,8.91666667 L11.75,8.91666667" id="Shape" stroke="#3F7EA3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <polyline id="Shape" stroke="#3F7EA3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="45.75 25.9166667 45.75 8.91666667 34.4166667 8.91666667"></polyline>
+                <path d="M28.75,6.08333333 C28.75,3.73733333 27.3333333,0.416666667 23.0833333,0.416666667 C18.8333333,0.416666667 17.4166667,3.73733333 17.4166667,6.08333333 L11.75,6.08333333 L11.75,17.4166667 L34.4166667,17.4166667 L34.4166667,6.08333333 L28.75,6.08333333 Z" id="Shape" stroke="#3F7EA3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M14.5833333,25.9166667 L28.75,25.9166667" id="Shape" stroke="#3F7EA3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M14.5833333,31.5833333 L28.75,31.5833333" id="Shape" stroke="#3F7EA3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M14.5833333,37.25 L28.75,37.25" id="Shape" stroke="#3F7EA3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M14.5833333,42.9166667 L23.0833333,42.9166667" id="Shape" stroke="#3F7EA3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

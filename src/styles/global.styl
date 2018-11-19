@@ -1,0 +1,125 @@
+
+// Bukwild boilerplate styles
+@require '~normalize.css/normalize.css'
+@require '~bukwild-stylus-library/boilerplate'
+
+// Set font-sizes so rem values for responsive effects.  Combined with the
+// font() call on `body`, this scales from 20px down to 14px
+:root
+	mq-values(font-size, 90%, 80%, max-w)
+
+// Hide until vue has finished initting
+[v-cloak]
+	display none
+
+.wrapper
+	overflow-x hidden
+
+//Layout and Background
+.container
+	display table
+	height 100vh
+	width 100vw
+
+	.top
+	.middle
+	.bottom
+		display table-row
+
+	.middle
+		height 100%
+		.cell
+			padding rem(30px) rem(10px)
+			@media (max-width mobile)
+				padding rem(20px) rem(10px)
+			display table-cell
+			height 100%
+			vertical-align middle
+
+//Background Shape
+body
+	background: background-grey
+	color dark-grey
+	position relative
+	margin 0
+	overflow-x hidden //-Needed for IE
+	line-height normal
+	text-align center
+	font-family OpenSans
+
+	&:before
+		background no-repeat url('img/background-grey-angle.svg')
+		position absolute
+		bottom 0
+		background-size cover
+		left -40%
+		@media (max-width tablet)
+			left -60%
+		right 0
+		content ""
+		height 100%
+		z-index -2
+
+
+//Global Classes
+
+.hidden
+	visibility hidden
+
+//horizontal center with margin
+.center
+	margin 0 auto
+	text-align center
+
+.index
+	margin 0 auto
+	text-align center
+	padding 0
+	li
+		margin 1% auto
+		list-style none
+
+.center-wrapper
+	//Center Mixin
+	center-align(both)
+	width 100%
+
+
+
+
+
+//Global Elements STyles
+
+h1
+	font extra-bold, 40px, dark-grey
+
+ul
+	li
+		list-style none
+
+input
+	cursor: inherit
+	font-family OpenSans !important
+
+// IE 
+input::ms-reveal
+	display none
+input::-ms-clear
+	display: none
+a
+	color primary-blue
+	text-decoration none
+	&.underline//Needed if link needs to be underlined
+		text-decoration underline
+
+:focus
+	outline none
+
+p
+	margin 0
+	padding 0
+
+.clearfix:after
+	content ""
+	display table
+	clear both

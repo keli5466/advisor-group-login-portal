@@ -1,0 +1,69 @@
+//Right arrow
+.right-arrow
+	font-weight 600
+	&:after
+		content icon-right-arrow
+		font icon, '', primary-blue
+
+//Circle BG for loading page icon
+.circle-background
+	background-color white
+	border-radius 100%
+	height rem(178px)
+	width rem(178px)
+	margin 0 auto
+	margin-bottom rem(30px)
+	display block
+	position relative
+	box-shadow 2px 6px 50px 0 rgba(86, 96, 101, 0.15)
+	img
+		center-align(both)
+		height rem(90px)
+		width rem(90px)
+
+//Invalid credentials Style
+.general-form-error
+	background-color error-red
+	font regular,16px, white
+	border-radius 6px
+	padding 2% 5%
+	// border 2px solid error-red
+	margin-bottom rem(36px)
+	box-shadow 8px 9px 45px 0 rgba(25, 25, 38, 0.3)
+	transition background-color 300ms ease-in-out
+	&:hover
+		background-color red
+
+//Loader icon
+.loader
+	max-width 100px
+	max-height 100px
+	margin 0 auto
+	margin-bottom 20px
+	&:after
+		font icon, 50px, primary-blue
+		content icon-Login-btn-loader //-Loader Icon
+		animation: rotate 1.4s linear infinite
+		display block
+
+
+//Needed to wrap loader with copy
+.loader-block
+	margin-top rem(74px)
+	p
+		font regular, 20px, dark-grey
+
+	&--larger
+		.loader
+			margin-bottom 48px
+			&:after
+				font-size 70px
+		p
+			font-size 28px
+
+
+	//rotate animation
+@keyframes rotate
+	to {
+		transform rotate(360deg)
+	}

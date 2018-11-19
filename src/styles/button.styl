@@ -1,0 +1,49 @@
+//Button Style
+
+button
+	padding 0
+
+button,
+.btn
+	button()
+	position relative
+	max-width 250px
+	width 100%
+	font bold, 18px, white
+	height rem(64px)
+	line-height rem(64px)
+	margin rem(36px) auto rem(32px) auto
+	border none
+	transition all .2s ease-in-out
+	&--primary
+		background-color primary-blue
+	&.no-top
+		margin-top 0
+
+	&:hover
+		background light-grey
+		box-shadow 0 4px 20px 0 rgba(106, 119, 126, 0.1)
+	&:active
+		opacity .8
+		transition opacity .2s ease-in-out
+	//-Disabled button
+	&:disabled
+		opacity 0.2
+		&:hover
+			opacity 0.2
+			cursor not-allowed
+
+//Link animation
+a:hover
+	opacity .7
+	transition opacity .2s ease-in-out
+
+
+//-Button with Loader Animation
+.btnloader
+	color primary-blue
+	&:after
+		font icon, 40px, white
+		content icon-Login-btn-loader //-Loader Icon
+		animation: rotate 1.4s linear infinite
+		display block

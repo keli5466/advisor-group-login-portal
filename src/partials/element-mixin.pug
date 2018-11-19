@@ -1,0 +1,66 @@
+mixin general-form-error(copy)
+	.general-form-error
+		p !{copy}
+//-Loading Button
+mixin loadButton(label,top)
+	if top
+		button.btn.btn--primary(
+			type='submit'
+			:disabled="errors.any()"
+			:class='{ btnloader: submitting }') {{ submitting ? " " : "!{label}" }} 
+	else
+		button.btn.btn--primary.no-top(
+			type='submit'
+			:disabled="errors.any()"
+			:class='{ btnloader: submitting }') {{ submitting ? " " : "!{label}" }} 
+
+
+
+//- Create a checkbox field for Terms and conditions
+mixin checkBox(name,validations)
+
+	//- Checkbox
+	input(name=name
+		v-model=name
+		id=name
+		:class='{checked: terms}'
+		v-validate="'"+validations+"'"
+		type='checkbox')
+	
+	//- Label
+	| I agree to the 
+	a.underline(href='#') terms and conditions
+
+
+mixin inputText(name, placeholder, validations, type)
+
+	//- Map input types
+	if type
+		- var type = type
+	else
+		- var type = "text"
+		
+	//- Automatically add debouncing to unique fields
+	//- https://regex101.com/r/Wlo67H/1
+	if validations.match(/(^|\|)unique\:/)
+		- var delay = 500
+	else
+		- var delay = null
+		
+	//- Add masking rules
+	//- https://regex101.com/r/k2TGU8/1
+	if matches = validations.match(/(?:^|\|)mask:(.+)(?:$|\|)/)
+		//- - var mask = '"'+matches[1]+'"'
+		- var mask = '"' + matches[1] + '"'
+	else
+		- var mask = null
+		
+	//- Make main input field
+	input(
+		v-validate='"' + validations + '"'
+		placeholder=placeholder
+		name=name
+		type=type
+		id=id
+		data-vv-delay=delay
+		v-mask=mask)
